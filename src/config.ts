@@ -90,7 +90,7 @@ function exitLog(msg: string): void
 
 function isTest(): boolean
 {
-    return typeof jest !== "undefined";
+    return process.env.JEST_WORKER_ID !== undefined;
 }
 
 export default readConfig;
